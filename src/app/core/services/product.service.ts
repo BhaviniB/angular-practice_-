@@ -5,28 +5,28 @@ import { Product } from '../models/Product';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductService {
-  productUrl= environment.server_url+ '/products/'
+  productUrl = environment.server_url + '/products/';
 
-  constructor(private apiService: ApiService) { }
-  
-  getAllProducts() : Observable<Product[]>{
-    return this.apiService.get(this.productUrl)
+  constructor(private apiService: ApiService) {}
+
+  getAllProducts(): Observable<Product[]> {
+    return this.apiService.get(this.productUrl);
   }
-  getProductById(id: string): Observable<Product>{
+  getProductById(id: string): Observable<Product> {
     return this.apiService.get(this.productUrl + id);
   }
 
-  updateProduct(product): Observable<Product>{
+  updateProduct(product): Observable<Product> {
     return this.apiService.put(this.productUrl + '/' + product.id, product);
   }
-  deleteProduct(id: string): Observable<Product>{
+  deleteProduct(id: string): Observable<Product> {
     debugger;
     return this.apiService.delete(this.productUrl + '/' + id);
   }
-  addProduct(ob: Product): Observable<Product>{
+  addProduct(ob: Product): Observable<Product> {
     return this.apiService.post(this.productUrl, ob);
   }
 }
