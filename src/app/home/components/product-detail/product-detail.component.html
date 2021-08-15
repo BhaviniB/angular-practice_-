@@ -1,0 +1,39 @@
+<p>{{product.id}}</p>
+
+<br><br>
+<div class="section" style="width: 50%;
+margin: 0 auto;">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="text-center">EDIT// ADD</h2>
+
+      <form [formGroup]="editForm" (ngSubmit)="submitEditForm(editForm.value)">
+        <label for="name" class="label-control">Name:</label>
+        <input autocomplete type="text" placeholder="name" formControlName="name" class="form-control">
+        <br>
+        <div class="form-group">
+          <label for="desc" class="label-control">desc:</label>
+          <input autocomplete type="desc" placeholder="desc" formControlName="desc"
+            class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="quantity" class="label-control">quantity:</label>
+            <input autocomplete type="quantity" placeholder="quantity" formControlName="quantity"
+              class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="mrp" class="label-control">mrp:</label>
+            <input autocomplete type="mrp" placeholder="mrp" formControlName="mrp"
+              class="form-control">
+          </div>
+        <br><br><br>
+        <br>
+        <div class="text-center pb-2">
+
+          <button type="submit" class="btn btn-primary mb-4"  >SAVE</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<br><br>
+<div class="section" style="width:100%; display: flex; justify-content: center;">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="text-center">LOGIN</h2>
+
+      <form [formGroup]="loginForm" (ngSubmit)="submitLoginForm(loginForm.value)">
+        <label for="email" class="label-control">Email:</label>
+        <input autocomplete type="text" placeholder="EMAIL" formControlName="email" class="form-control"
+          pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+
+        <div *ngIf="email.invalid && email.touched">
+          <div *ngIf="email.errors && email.errors.required">
+            email required
+          </div>
+          <div *ngIf="email.errors && email.errors.pattern ">
+            email invalid
+          </div>
+
+        </div>
+
+        <br>
+        <div class="form-group">
+          <label for="password" class="label-control">Password:</label>
+          <input autocomplete type="password" placeholder="PSW" formControlName="password"
+            class="form-control">
+          <div *ngIf="password.invalid && password.touched">
+            <div *ngIf="password.errors && password.errors.required">
+            email invalid
+            </div>
+            <div *ngIf="password.errors && password.errors.minlength">
+            password invalid
+            </div>
+          </div>
+        </div>
+        <br><br><br>
+        <br>
+        <div class="text-center pb-2">
+
+          <button type="submit" class="btn btn-primary mb-4" [disabled]="! loginForm.valid">LOGIN</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

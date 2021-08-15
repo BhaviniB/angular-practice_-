@@ -1,0 +1,68 @@
+{
+  "users": [
+    {
+      "name": "nagp",
+      "email": "nagp@gmail.com",
+      "password": "nagp@123",
+      "id": 1
+    }
+  ],
+  "products": [
+    {
+      "id": 2,
+      "mrp": 3000,
+      "quantity": 100,
+      "category": "men",
+      "image": "../../assets/products/db_p1.jpg",
+      "productName": "Product 2111",
+      "productDesc": "nxjnjnxwe",
+      "tags": [
+        "tag a",
+        "tag b"
+      ]
+    },
+    {
+      "id": 5,
+      "productName": "Product 5",
+      "image": "../../assets/products/db_p1.jpg",
+      "productDesc": "Desc 5",
+      "mrp": 5000,
+      "category": "men",
+      "tags": [
+        "tag a",
+        "tag b"
+      ],
+      "quantity": 500,
+      "returnable": false
+    },
+    {
+      "mrp": "11",
+      "quantity": "1",
+      "productName": "nhkjhkjh",
+      "productDesc": "kjhjhjkhjk",
+      "id": 6
+    },
+    {
+      "mrp": "7888",
+      "quantity": "7777",
+      "productName": "dumdum",
+      "productDesc": "hhu",
+      "id": 7
+    },
+    {
+      "mrp": "7886",
+      "quantity": "6767",
+      "productName": "hbjh",
+      "productDesc": "jhjhj",
+      "id": 8
+    },
+    {
+      "mrp": "79879",
+      "quantity": "9887979",
+      "productName": "soll",
+      "productDesc": "87897",
+      "id": 9
+    }
+  ],
+  "cart": []
+}

@@ -1,0 +1,42 @@
+
+  <div style="display: flex; flex-direction: row; justify-content: center;">
+  <input
+  style="margin-right: 20px;"
+  name="searchInput"
+  [(ngModel)]="searchInput"
+  type="text"
+  size="50"
+/> 
+
+ <select style="width: fit-content;" class="form-control" #t (change)="catChange(t.value)">
+  <option >All</option>
+  <option >men</option>
+  <option >women</option>
+</select>
+
+<a (click)="addProd()" class="btn btn-primary">ADD</a>
+
+</div>
+<div class="container" style="padding:20px">
+<div class='row'>
+  
+
+<div class="col-sm-6" *ngFor="let product of products | appFilter: searchInput | catFilter: cat">
+            <div class="card" style="width: 18rem;">
+                <img 
+                style='width:100px; height:100px'
+                src="https://cdn.searchenginejournal.com/wp-content/uploads/2020/07/which-is-better-for-product-page-seo-a-single-url-or-multiple-5f8d651dab749-1280x720.png"
+                class="card-img-top" alt="NO IMAGE">
+                <div class="card-body">
+                  <h5 class="card-title">{{ product.productName }}</h5>
+                  <p class="card-text">{{ product.productDesc }}</p>
+                  <p class="card-text">{{ product.mrp }}</p>
+                  <p class="card-text">{{ product.category }}</p>
+                  <a (click)="edit(product.id)" class="btn btn-primary">Edit</a>
+                  <a (click)="deleteProd(product.id)" class="btn btn-primary">Delete</a>
+            </div>
+        </div>
+    </div>
+      </div>
+
+</div>
